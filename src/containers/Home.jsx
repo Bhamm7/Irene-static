@@ -1,66 +1,21 @@
 import React from 'react'
 import { withSiteData } from 'react-static'
-import { Parallax, ParallaxBanner } from 'react-scroll-parallax'
-//
+
 import logoImg from '../logo.png'
+import doggo1Img from '../images/doggo1.jpg'
+import doggo2Img from '../images/doggo2.jpg'
 
 export default withSiteData(() => (
+  //<div className="wrapper">
   <div>
-    
-    <ParallaxBanner
-        className="your-class"
-        layers={[
-            {
-                image: 'https://lorempixel.com/320/240',
-                amount: 0.1,
-                slowerScrollRate: false,
-            },
-            {
-                image: 'https://lorempixel.com/320/240',
-                amount: 0.2,
-                slowerScrollRate: false,
-            },
-        ]}
-        style={{
-            height: '100vh',
-        }}
-    >
-        <h1>Banner Children</h1>`
-    </ParallaxBanner>
-
-    <div className="section1">
-      <h1>First section</h1>
-    </div>
-    <ParallaxBanner
-        className="your-class"
-        layers={[
-            {
-                image: 'https://lorempixel.com/320/240',
-                amount: 0.1,
-                slowerScrollRate: false,
-            },
-            {
-                image: 'https://lorempixel.com/320/240',
-                amount: 0.2,
-                slowerScrollRate: false,
-            },
-        ]}
-        style={{
-            height: '100vh',
-        }}
-    >
-        <h1>Banner Children</h1>`
-    </ParallaxBanner>
-
-    <div className="section2">
-      <h1>New section</h1>
-    </div>
-
-
-
-
-    {/*<h1 style={{ textAlign: 'center' }}>Welcome to</h1>
-    <img src={logoImg} alt="" /> */}
+    <section className="section parallax bg1">
+      <h1> Such Adorableness </h1>
+    </section>
+    <section className="section static">
+      <h1>Boring</h1>
+    </section>
+    <section className="section parallax bg2">
+      <h1>SO FWUFFY AWWW </h1>
+    </section>
   </div>
-  
 ))

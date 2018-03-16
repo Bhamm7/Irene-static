@@ -6,86 +6,123 @@
     Arial,
     'Lucida Grande',
     sans-serif;
+    html,
     body {
-        background-image: url(https://loremflickr.com/320/240);
-        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://loremflickr.com/320/240);
-        background-size: cover;
-        font-family: $sans-serif-font;
-        font-weight: 300;
-        font-size: 16px;
-        margin: 0 auto;
+        margin: 0;
         padding: 0;
+        width: 100%;
+        height: 100%;
     }
     
-    a {
-        text-decoration: none;
-        color: $primary-color;
-        font-weight: bold;
+    #footer .content p {
+        margin-bottom: 0
     }
     
-    img {
-        max-width: 100%;
+    html {
+        overflow: hidden;
     }
     
-    h1 {
-        color: white;
+    body {
+        margin: 0;
+        // background-image: url(https://loremflickr.com/320/240);
+        // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%), url(https://loremflickr.com/320/240);
+        // background-size: cover;
+        // font-family: $sans-serif-font;
+        // font-weight: 300;
+        // font-size: 16px;
+        // margin: 0 auto;
+        // padding: 0;
     }
     
     nav {
         z-index: 1;
         width: 100%;
-        background-color: rgba($primary-color, 0.85);
+        background-color: rgba($primary-color, 0.9);
+        height: 10vh;
         a {
-            color: white;
+            color: black;
             padding: 1rem;
             display: inline-block;
         }
     }
     
-    .section1 {
+    .wrapper {
+        /* The height needs to be set to a fixed value for the effect to work.
+            * 100vh is the full height of the viewport. */
         height: 100vh;
-        background-color: yellow;
+        /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+        overflow-x: hidden;
+        /* Enable scrolling on the page. */
+        overflow-y: auto;
+        /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+        perspective: 2px;
     }
     
-    .section2 {
-        height: 100vh;
-        background-color: blue;
-    }
-    
-    .content {
-        padding: 1rem;
-    }
-    
-    .whole-background {
-        z-index: -1;
+    .section {
+        /* Needed for children to be absolutely positioned relative to the parent. */
         position: relative;
-        width: 100%;
-        height: 100%;
+        /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+        height: 100vh;
+        /* For text formatting. */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-shadow: 0 0 5px #000;
     }
     
-    @media (min-width:20em) {
-        /* smartphones, iPhone, portrait 480x320 phones 320px*/
+    .parallax::after {
+        /* Display and position the pseudo-element */
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        /* Move the pseudo-element back away from the camera,
+            * then scale it back up to fill the viewport.
+            * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+        transform: translateZ(-1px) scale(1.7);
+        /* Force the background image to fill the whole element. */
+        background-size: 100%;
+        /* Keep the image from overlapping sibling elements. */
+        z-index: -1;
+    }
+    /* The styling for the static div. */
+    
+    .static {
+        background: red;
+    }
+    /* Sets the actual background images to adorable kitties. This part is crucial. */
+    
+    .bg1::after {
+        background-image: url('../src/images/doggo1.jpg');
+        background-size: cover;
     }
     
-    @media (min-width:30.063em) {
-        /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 481px*/
+    .bg2::after {
+        background-image: url('../src/images/doggo2.jpg');
+        background-size: cover;
     }
     
-    @media (min-width:40.063em) {
-        /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones 641px*/
-    }
-    
-    @media (min-width:60.063em) {
-        /* tablet, landscape iPad, lo-res laptops ands desktops 961px*/
-    }
-    
-    @media (min-width:64.063em) {
-        /* big landscape tablets, laptops, and desktops 1025px*/
-    }
-    
-    @media (min-width:100em) {
-        /* hi-res laptops and desktops 1600px*/
-        body {
-            max-width: 90%;
-        }
-    }
+    // @media (min-width:20em) {
+    //     /* smartphones, iPhone, portrait 480x320 phones 320px*/
+    // }
+    // @media (min-width:30.063em) {
+    //     /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. 481px*/
+    // }
+    // @media (min-width:40.063em) {
+    //     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones 641px*/
+    // }
+    // @media (min-width:60.063em) {
+    //     /* tablet, landscape iPad, lo-res laptops ands desktops 961px*/
+    // }
+    // @media (min-width:64.063em) {
+    //     /* big landscape tablets, laptops, and desktops 1025px*/
+    // }
+    // @media (min-width:100em) {
+    //     /* hi-res laptops and desktops 1600px*/
+    //     body {
+    //         max-width: 90%;
+    //     }
+    // }
