@@ -3,6 +3,7 @@ import { Router, Link } from 'react-static'
 import { hot } from 'react-hot-loader'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import ResponsiveMenu from 'react-responsive-navbar'
+import Footer from './containers/Footer'
 //
 import Routes from 'react-static-routes'
 import menuImg from 'images/logo.png'
@@ -40,6 +41,7 @@ const App = () => (
         </nav>
         <div className="content">
           <Routes />
+          <Footer />
         </div>
       </div>
     </Router>
