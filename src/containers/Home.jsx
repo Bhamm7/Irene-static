@@ -16,9 +16,7 @@ export default withSiteData(() => (
   </section> */}
 
     <section>
-      <div className="parallax-one">
-        <h2>SOUTHERN CALIFORNIA</h2>
-      </div>
+      <div className="parallax-one" />
     </section>
 
     <section>
@@ -30,9 +28,8 @@ export default withSiteData(() => (
     </section>
 
     <section>
-      <div className="parallax-two">
-        <h2>NEW YORK</h2>
-      </div>
+      <div className="parallax-two" />
+    
     </section>
 
     <section>
@@ -44,9 +41,8 @@ export default withSiteData(() => (
     </section>
 
     <section>
-      <div className="parallax-three">
-        <h2>ENCHANTED FOREST</h2>
-      </div>
+      <div className="parallax-three" />
+  
     </section>
 
     <section>

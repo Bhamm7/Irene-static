@@ -14,7 +14,7 @@ import './app.scss'
 const App = () => (
   <ParallaxProvider>
     <Router>
-      <div>
+      <div className="outterDiv">
         <nav>
           <div className="logo">
             IRENE RUDNYK PHOTOGRAPHY
@@ -39,10 +39,10 @@ const App = () => (
             }
           />
         </nav>
-        <div className="content">
-          <Routes />
-          <Footer />
-        </div>
+        <main>
+          <Routes /> 
+        </main>
+        <Footer />
       </div>
     </Router>
   </ParallaxProvider>
