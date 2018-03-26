@@ -1,18 +1,20 @@
 nav {
     height: 8vh;
     width: 100%;
-    display: inline-block;
+    display: grid;
+    grid-template-columns: repeat(12, 8.333%);
 }
 
 .logo {
-    float: left;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    grid-column: 2 / 6;
     color: black;
-    padding-top: 1vh;
-    padding-left: 5vw;
-    // margin-top: 2vh;  
+    // padding-top: 10px;
+    // padding-bottom: 10px;
     font-family: 'Oswald', sans-serif;
-    font-size: 2.5em;
-    // letter-spacing: 10px;
+    font-size: 2.7vw;
     text-align: center;
     font-weight: 400;
     text-transform: uppercase;
@@ -24,20 +26,28 @@ nav {
     color: red;
 }
 
+.link-area {
+    // margin: auto;
+    grid-column: 7 / 12;
+}
+
 .links {
+    display: flex;
+    align-self: center;
+    justify-self: center;
     transition: 0.2s;
-    width: 60%;
-    text-align: center;
-    margin-left: 40%;
-    padding-top: 1.5em;
+    // width: 60%;
+    // text-align: center;
+    // margin-left: 40%;
+    // padding-top: 1.5em;
     // display: inline-block;
     a {
         color: black;
         padding-right: 1em;
-        padding-top: 2vh;
+        // padding-top: 2vh;
         // margin-top: 2vh;  
         font-family: 'Oswald', sans-serif;
-        font-size: 1.2em;
+        font-size: 1vw;
         // letter-spacing: 10px;
         text-align: center;
         font-weight: 400;
