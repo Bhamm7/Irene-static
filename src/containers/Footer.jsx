@@ -14,9 +14,9 @@ export default () => (
         <ul className="footer-list" id="footer-left">
             <h1>Links</h1>
             <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
-            <Link to="/social">Social</Link>
+            <Link to="/about">About</Link>    
             <Link to="/gallery">Gallery</Link>
+            <Link to="/social">Social</Link>
             <Link to="/workshops">Workshops</Link>
             <Link to="/store">Store</Link>
             <Link to="/contact">Contact</Link>

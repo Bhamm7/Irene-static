@@ -1,5 +1,6 @@
         $header-color: #b2a3ba;
         nav {
+            position: relative;
             min-height: 50px;
             height: 8vh;
             width: 100%;
@@ -12,7 +13,6 @@
             align-self: center;
             justify-self: center;
             grid-column: 2 / 12;
-            color: $header-color;
             // padding-top: 10px;
             // padding-bottom: 10px;
             font-family: 'Oswald', sans-serif;
@@ -20,8 +20,11 @@
             text-align: center;
             font-weight: 400;
             text-transform: uppercase;
-            text-decoration: none;
             text-shadow: 1px 1px #3d3b3d;
+            a {
+                color: $header-color;
+                text-decoration: none;
+            }
         }
         
         .link-area {
