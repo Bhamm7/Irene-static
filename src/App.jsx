@@ -1,13 +1,12 @@
 import React from 'react'
-import { Router, Link } from 'react-static'
+import { Router } from 'react-static'
 import { hot } from 'react-hot-loader'
 import { ParallaxProvider } from 'react-scroll-parallax'
-import ResponsiveMenu from 'react-responsive-navbar'
-import Footer from './containers/Footer'
-//
 import Routes from 'react-static-routes'
-import menuImg from 'images/logo.png'
 
+//
+import Footer from './containers/Footer'
+import Header from './containers/Header'
 
 import './app.scss'
 
@@ -15,32 +14,7 @@ const App = () => (
   <ParallaxProvider>
     <Router>
       <div className="outterDiv">
-        <nav>
-          <div className="logo">
-            <p>IRENE RUDNYK PHOTOGRAPHY</p>
-          </div>
-          <div className="link-area">
-            <ResponsiveMenu
-              menuOpenButton={<div className="openMenu"><img alt="" src={menuImg} /></div>}
-              menuCloseButton={<div className="openMenu"><img alt="" src={menuImg} /></div>}
-              changeMenuOn="1400px"
-              largeMenuClassName="large-menu"
-              smallMenuClassName="small-menu"
-              menu={
-                <div className="links">
-                  <Link to="/">Home</Link>
-                  <Link to="/about">About</Link>
-                  <Link to="/social">Social</Link>
-                  <Link to="/gallery">Gallery</Link>
-                  <Link to="/workshops">Workshops</Link>
-                  <Link to="/store">Store</Link>
-                  <Link to="/contact">Contact</Link>
-                  <Link to="/blog">Blog</Link>
-                </div>
-              }
-            />
-          </div>
-        </nav>
+        <Header />
         <main>
           <Routes /> 
         </main>

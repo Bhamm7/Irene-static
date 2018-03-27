@@ -3,57 +3,73 @@
 
 /**************************/
 
-@media screen and (max-width: 2300px) and (min-width: 1561px) {
+@media screen and (max-width: 2300px) and (min-width: 1641px) {
     .link-area {
         grid-column: 16 / 22;
     }
 }
 
-@media screen and (max-width: 1560px) and (min-width: 1401px) {
+@media screen and (max-width: 1640px) and (min-width: 1401px) {
     .logo {
         grid-column: 2 / 14;
     }
     .link-area {
-        grid-column: 16/22
-    }
-    .links {
-        a{
-            font-size: 1.2em;
+        grid-column: 16/22;
+        a {
+            font-size: 1.3em;
         }
     }
 }
+
 @media screen and (max-width: 1400px) and (min-width: 1281px) {
+    nav {
+        height: 70px;
+    }
     .logo {
         grid-column: 5/21;
     }
     .link-area {
-        grid-column: 23
+        display: none;
+        // grid-column: 21 / 24;
+        position: absolute;
+        top: 3vh;
+        margin-left: 90%;
     }
-    .links {
-        a{
-            font-size: 1.2em;
-        }
+    .menu-button {
+        display: grid;
     }
 }
 
 @media screen and (max-width: 1280px) and (min-width: 960px) {
+    nav {
+        height: 70px;
+    }
     .logo {
         grid-column: 3 / 20;
     }
     .link-area {
-        grid-column: 23
+        grid-column: 23;
+        display: none;
     }
-
+    .menu-button {
+        display: grid;
+    }
 }
 
 @media screen and (max-width: 959px) and (min-width: 768px) {
+    nav {
+        height: 70px;
+    }
     .logo {
         grid-column: 1/23;
     }
     .link-area {
-        grid-column: 23
+        grid-column: 23;
+        display: none;
     }
-
+    .menu-button {
+        display: grid;
+    }
     #parallax-world-of-ugg .block {
         padding: 40px;
         width: 620px;
@@ -73,14 +89,28 @@
 }
 
 @media screen and (max-width: 767px) {
+    nav {
+        height: 70px;
+    }
     .logo {
         grid-column: 1/23;
-        font-size: 2.2em
+        font-size: 2.2em;
     }
     .link-area {
-        grid-column: 23
+        grid-column: 22;
+        display: none;
     }
-    
+    .menu-button {
+        display: grid;
+        padding-bottom: 17px;
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+    .drop {
+        top: 53px;
+    }
     #parallax-world-of-ugg .block {
         padding: 30px;
         width: 420px;
@@ -113,6 +143,79 @@
 }
 
 @media screen and (max-width: 479px) {
+    nav {
+        height: 70px;
+    }
+    .logo {
+        font-size: 1.7em;
+    }
+    .menu-button {
+        display: grid;
+        grid-column: 23 / 24;
+    }
+    .link-area {
+        display: none;
+    }
+    #parallax-world-of-ugg .block {
+        padding: 30px 15px;
+        width: 290px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    nav {
+        height: 50px;
+    }
+    .logo {
+        font-size: 1.5em;
+    }
+    .menu-button {
+        display: grid;
+        padding-bottom: 12px;
+        grid-column: 23 / 24;
+        img {
+            height: 25px;
+            width: 25px;
+        }
+    }
+    .drop {
+        top: 38px;
+        a {
+            font-size: 1em;
+            margin: 10px 25px 10px 25px;
+        }
+    }
+    .link-area {
+        display: none;
+    }
+    #parallax-world-of-ugg .block {
+        padding: 30px 15px;
+        width: 290px;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    nav {
+        height: 50px;
+    }
+    .logo {
+        font-size: 1.2em;
+    }
+    .menu-button {
+        display: grid;
+        padding-bottom: 12px;
+        grid-column: 23 / 24;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .drop {
+        top: 38px;
+    }
+    .link-area {
+        display: none;
+    }
     #parallax-world-of-ugg .block {
         padding: 30px 15px;
         width: 290px;
