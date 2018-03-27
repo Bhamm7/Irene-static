@@ -3,7 +3,57 @@
 
 /**************************/
 
+@media screen and (max-width: 2300px) and (min-width: 1561px) {
+    .link-area {
+        grid-column: 16 / 22;
+    }
+}
+
+@media screen and (max-width: 1560px) and (min-width: 1401px) {
+    .logo {
+        grid-column: 2 / 14;
+    }
+    .link-area {
+        grid-column: 16/22
+    }
+    .links {
+        a{
+            font-size: 1.2em;
+        }
+    }
+}
+@media screen and (max-width: 1400px) and (min-width: 1281px) {
+    .logo {
+        grid-column: 5/21;
+    }
+    .link-area {
+        grid-column: 23
+    }
+    .links {
+        a{
+            font-size: 1.2em;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) and (min-width: 960px) {
+    .logo {
+        grid-column: 3 / 20;
+    }
+    .link-area {
+        grid-column: 23
+    }
+
+}
+
 @media screen and (max-width: 959px) and (min-width: 768px) {
+    .logo {
+        grid-column: 1/23;
+    }
+    .link-area {
+        grid-column: 23
+    }
+
     #parallax-world-of-ugg .block {
         padding: 40px;
         width: 620px;
@@ -23,6 +73,14 @@
 }
 
 @media screen and (max-width: 767px) {
+    .logo {
+        grid-column: 1/23;
+        font-size: 2.2em
+    }
+    .link-area {
+        grid-column: 23
+    }
+    
     #parallax-world-of-ugg .block {
         padding: 30px;
         width: 420px;

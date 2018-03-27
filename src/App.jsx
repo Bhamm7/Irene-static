@@ -17,15 +17,15 @@ const App = () => (
       <div className="outterDiv">
         <nav>
           <div className="logo">
-            IRENE RUDNYK PHOTOGRAPHY
+            <p>IRENE RUDNYK PHOTOGRAPHY</p>
           </div>
           <div className="link-area">
             <ResponsiveMenu
               menuOpenButton={<div className="openMenu"><img alt="" src={menuImg} /></div>}
               menuCloseButton={<div className="openMenu"><img alt="" src={menuImg} /></div>}
-              changeMenuOn="1175px"
-              largeMenuClassName="large-menu-classname"
-              smallMenuClassName="small-menu-classname"
+              changeMenuOn="1400px"
+              largeMenuClassName="large-menu"
+              smallMenuClassName="small-menu"
               menu={
                 <div className="links">
                   <Link to="/">Home</Link>
