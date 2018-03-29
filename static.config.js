@@ -1,12 +1,23 @@
 import axios from 'axios'
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import Butter from 'buttercms'
+
+const butter = Butter('763fdfaf8d9f5f8179931fad07f2cc98bf3cd155')
+
+//
+
+butter.post.list({ page: 1, page_size: 10 }).then(function(postResponse) {
+
+    console.log(postResponse)
+})
 
 export default {
     getSiteData: () => ({
         title: 'React Static',
     }),
     getRoutes: async() => {
-        const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        // const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        const { data: posts } = butter.post.list({ page: 1, page_size: 10 })
         return [{
                 path: '/',
                 component: 'src/containers/Home',

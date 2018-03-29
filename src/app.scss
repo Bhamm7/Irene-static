@@ -1,3 +1,7 @@
+$header-color: #a68bb5;
+// $text-color: #615863;
+$font-color: #5b5060;
+
 /* Use other sass components */
 
 @import 'scss_files/reset';
@@ -14,7 +18,7 @@ main {
     overflow: auto;
     // padding: 0 0 180px 0;
     padding: 0;
-    min-height: 92vh;
+    // min-height: 92vh;
     // margin-bottom: 10px;
 }
 
@@ -100,6 +104,44 @@ p {
 
 .right {
     text-align: end;
+}
+
+.home-button-white {
+    a {
+        display: inline-block;
+        font-family: 'Oswald', sans-serif;
+        font-size: 3em;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $header-color;
+        padding: 25px;
+        margin: 0;
+        text-decoration: none;
+    }
+    a:hover {
+        transition: 0.3s;
+        border: 5px solid $header-color;
+        padding: 20px;
+    }
+}
+
+.home-button-img {
+    a {
+        display: inline-block;
+        font-family: 'Oswald', sans-serif;
+        font-size: 3em;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: white;
+        padding: 25px;
+        margin: 0;
+        text-decoration: none;
+    }
+    a:hover {
+        transition: 0.3s;
+        border: 5px solid white;
+        padding: 20px;
+    }
 }
 
 
