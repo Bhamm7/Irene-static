@@ -1,61 +1,79 @@
 import React from 'react'
 import Gallery from 'react-photo-gallery'
 //
-import one from '../images/1.jpg'
-import two from '../images/20.jpg'
-import three from '../images/3.jpg'
-import four from '../images/5t.jpg'
-import five from '../images/5.jpg'
-import nineteen from '../images/19.jpg'
-import nine from '../images/9 crop.jpg'
-import dog1 from '../images/doggo1.jpg'
-import dog2 from '../images/doggo2.jpg'
+import p1 from '../images/1.jpg'
+import p2 from '../images/2.jpg'
+import p3 from '../images/3.jpg'
+import p4 from '../images/4.jpg'
+import p5 from '../images/5.jpg'
+import p6 from '../images/6.jpg'
+import p7 from '../images/7.jpg'
+import p8 from '../images/8.jpg'
+import p9 from '../images/9.jpg'
+import p10 from '../images/10.jpg'
+import p11 from '../images/11.jpg'
+import p12 from '../images/12.jpg'
 
 const PHOTO_SET = [
   {
-    src: one,
+    src: p1,
+    width: 5,
+    height: 7
+  },
+  {
+    src: p2,
+    width: 4,
+    height: 5
+  },
+  {
+    src: p3,
+    width: 5,
+    height: 7
+  },
+  {
+    src: p4,
+    width: 5,
+    height: 7
+  },
+  {
+    src: p5,
+    width: 5,
+    height: 7
+  },
+  {
+    src: p6,
     width: 1,
     height: 1
   },
   {
-    src: two,
+    src: p7,
+    width: 5,
+    height: 7
+  },
+  {
+    src: p8,
     width: 4,
-    height: 3
+    height: 5
   },
   {
-    src: three,
-    width: 3,
-    height: 4
+    src: p9,
+    width: 5,
+    height: 7
   },
   {
-    src: dog2,
-    width: 4,
-    height: 3
+    src: p10,
+    width: 5,
+    height: 7
   },
   {
-    src: five,
-    width: 3,
-    height: 4
+    src: p11,
+    width: 7,
+    height: 5
   },
   {
-    src: four,
-    width: 3,
-    height: 4
-  },
-  {
-    src: nineteen,
-    width: 3,
-    height: 4
-  },
-  {
-    src: dog1,
-    width: 4,
-    height: 3
-  },
-  {
-    src: nine,
-    width: 4,
-    height: 3
+    src: p12,
+    width: 5,
+    height: 7
   }
   
 ];
@@ -68,11 +86,11 @@ if (w < h || w < 600) {
   columnCount = 1
 }
 else {
-  columnCount = 3
+  columnCount = 4
 }
 
 export default () => (
-  <div>
-    <Gallery photos={PHOTO_SET} columns={columnCount} />
+  <div className="gallery_container">
+    <Gallery photos={PHOTO_SET} columns={columnCount} margin={10} />
   </div>
 )

@@ -4,8 +4,6 @@ import 'animate.css/animate.min.css'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 import logoImg from '../images/logo.png'
-import doggo1Img from '../images/doggo1.jpg'
-import doggo2Img from '../images/doggo2.jpg'
 
 export default withSiteData(() => (
   <div id="parallax">

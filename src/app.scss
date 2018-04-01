@@ -13,6 +13,8 @@ $font-color: #5b5060;
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+@import url(https://fonts.googleapis.com/css?family=Catamaran|Zeyada);
+
 main {
     width: 100%;
     overflow: auto;
@@ -126,6 +128,7 @@ p {
 }
 
 .home-button-img {
+    margin-top: 30vh;
     a {
         display: inline-block;
         font-family: 'Oswald', sans-serif;
@@ -172,6 +175,7 @@ p {
     // height: 70vh;
     background: white;
     padding: 60px;
+    height: 40vh;
     max-width: 940px;
     margin: 0 auto;
     text-align: justify;
@@ -216,13 +220,14 @@ p {
 }
 
 #parallax .parallax-two {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    // padding-top: 200px;
+    // padding-bottom: 200px;
     // height: 100vh;
     overflow: hidden;
     position: relative;
+    height: 70vh;
     width: 100%;
-    background-image: url("./images/20.jpg");
+    background-image: url("./images/asha_home.jpg");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -232,10 +237,11 @@ p {
 }
 
 #parallax .parallax-three {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    // padding-top: 200px;
+    // padding-bottom: 200px;
     overflow: hidden;
     position: relative;
+    height: 70vh;
     width: 100%;
     background-image: url("./images/9 crop.jpg");
     background-attachment: fixed;
@@ -247,12 +253,13 @@ p {
 }
 
 #parallax .parallax-four {
-    padding-top: 200px;
-    padding-bottom: 200px;
+    // padding-top: 200px;
+    // padding-bottom: 200px;
     overflow: hidden;
     position: relative;
+    height: 70vh;
     width: 100%;
-    background-image: url("./images/1.jpg");
+    background-image: url("./images/vlada_home.jpg");
     background-attachment: fixed;
     background-size: cover;
     -moz-background-size: cover;
@@ -281,18 +288,78 @@ p {
     overflow: hidden;
     // background-image: url("./images/doggo1.jpg");
     // background-size: 100%;
-    img {
-        // z-index: -1;
-        display: block;
-        opacity: 0.3;
-        height: 100%;
-        width: 100%;
+}
+
+.about_content {
+    width: 80vw;
+    margin: 0 auto;
+    overflow-y: hidden;
+    h1 {
+        text-align: center;
+        margin-top: 2em;
+        font-size: 3em;
+        font-family: 'Oswald', 'sans-serif';
+        color: $font-color;
+    }
+    p {
+        font-family: 'Catamaran', sans-serif;
+        color: $font-color;
+        font-size: 1.5em;
     }
 }
 
-#aboutContent {
-    position: absolute;
-    top: 50px;
-    left: 100px;
-    // height: 100%;
+.about_grid {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40vh 40vh 40vh 40vh;
+    // align-items: center;
+    justify-content: center;
+}
+
+.about_text_left {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 3;
+    align-self: auto;
+    justify-self: center;
+    p {
+        font-size: 1.7em;
+    }
+}
+.about_text_right {
+    grid-column: 2 / 3; 
+    grid-row: 3 / 5;
+    align-self: auto;
+    justify-self: center;
+    p {
+        font-size: 1.7em;
+    }
+}
+
+.about_img_right {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    align-self: auto;
+    justify-self: center;
+    img { 
+        width: auto;
+        max-height: 100%;
+    }
+}
+.about_img_left {
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+    align-self: auto;
+    justify-self: center;
+    img { 
+        width: auto;
+        max-height: 100%;
+    }
+}
+
+
+.gallery_container {
+    width: 80vw;
+    margin: 0 auto;
 }
