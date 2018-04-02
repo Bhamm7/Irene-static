@@ -14,7 +14,6 @@ $font-color: #5b5060;
 @import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Catamaran|Zeyada);
-
 main {
     width: 100%;
     overflow: auto;
@@ -313,53 +312,180 @@ p {
     margin-bottom: 10%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 40vh 40vh 40vh 40vh;
+    grid-template-rows: 600px 600px;
+    grid-row-gap: 3em;
+    grid-column-gap: 2em;
     // align-items: center;
     justify-content: center;
 }
 
 .about_text_left {
-    grid-column: 1 / 2; 
-    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     align-self: auto;
     justify-self: center;
     p {
-        font-size: 1.7em;
+        font-size: 1.5vw;
     }
 }
+
 .about_text_right {
-    grid-column: 2 / 3; 
-    grid-row: 3 / 5;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
     align-self: auto;
     justify-self: center;
     p {
-        font-size: 1.7em;
+        font-size: 1.5vw;
     }
 }
 
 .about_img_right {
     grid-column: 2 / 3;
-    grid-row: 1 / 3;
+    grid-row: 1 / 2;
     align-self: auto;
     justify-self: center;
-    img { 
-        width: auto;
-        max-height: 100%;
-    }
-}
-.about_img_left {
-    grid-column: 1 / 2;
-    grid-row: 3 / 5;
-    align-self: auto;
-    justify-self: center;
-    img { 
-        width: auto;
+    img {
+        max-width: 100%;
         max-height: 100%;
     }
 }
 
+.about_img_left {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: auto;
+    justify-self: center;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 .gallery_container {
     width: 80vw;
     margin: 0 auto;
+}
+
+
+/*********/
+
+.about-flex {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+// .col-image {
+//     background-size: cover;
+//     background-position: center center;
+//     .bio1 {
+//         background-image: url("images/bio.jpg");
+//     }
+//     .bio2 {
+//         background-image: url("images/IRENE.jpg");
+//     }
+// }
+// .col-text {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+// }
+// .col {
+//     flex: 1;
+// }
+.bio1 {
+    // height: 500px;
+    // width: auto;
+    background-image: url("images/bio.jpg");
+}
+
+.bio2 {
+    background-image: url("images/IRENE.jpg");
+}
+
+// .col-left {
+//     order: -1;
+// }
+// .aligner-item {
+//     width: 600px;
+// }
+.col-text {
+    height: 20em;
+}
+
+.grid-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    height: 700px;
+    margin: 5%
+}
+
+.col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    margin-right: 3em;
+    margin-bottom: 3em;
+}
+
+.col-left {
+    -webkit-box-ordinal-group: -1;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+.col-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Aligner-item {
+    width: 75%;
+}
+
+.col-image {
+    // background-size: cover;
+    // background-position: center center;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 640px) {
+    .grid-flex {
+        height: 40em;
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    .col {
+        order: vertical;
+    }
+    .col-left {
+        -webkit-box-ordinal-group: 0;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .col-text div p {
+        padding: 1em;
+    }
+    .Aligner-item {
+        width: 90%;
+    }
 }
