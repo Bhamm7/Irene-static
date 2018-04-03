@@ -90,7 +90,7 @@ else {
 }
 
 export default () => (
-  <div className="gallery_container">
+  <div className="gallery-container">
     <Gallery photos={PHOTO_SET} columns={columnCount} margin={10} />
   </div>
 )

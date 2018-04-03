@@ -6,6 +6,7 @@ $font-color: #5b5060;
 
 @import 'scss_files/reset';
 @import 'scss_files/header';
+@import 'scss_files/contact';
 @import 'scss_files/footer';
 @import 'scss_files/mediaqueries';
 
@@ -14,6 +15,10 @@ $font-color: #5b5060;
 @import url(https://fonts.googleapis.com/css?family=Oswald:300,400,700);
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
 @import url(https://fonts.googleapis.com/css?family=Catamaran|Zeyada);
+// html,
+// body {
+//     overflow-x: hidden;
+// }
 main {
     width: 100%;
     overflow: auto;
@@ -49,13 +54,23 @@ main {
 
 h1 {
     font-family: 'Oswald', sans-serif;
+    color: $font-color;
     font-size: 2em;
     margin-top: 1em;
     margin-bottom: 1em;
 }
 
+h2 {
+    font-family: 'Oswald', sans-serif;
+    color: $font-color;
+    font-size: 1.65em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
+}
+
 h3 {
     font-family: 'Oswald', sans-serif;
+    color: $font-color;
     font-size: 1.3em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
@@ -68,6 +83,7 @@ a {
 
 p {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $font-color;
     font-size: 1em;
 }
 
@@ -95,15 +111,15 @@ p {
     }
 }
 
-.left {
+#prallax .left {
     text-align: start;
 }
 
-.middle {
+#parallax .middle {
     text-align: center;
 }
 
-.right {
+#parallax .right {
     text-align: end;
 }
 
@@ -268,6 +284,31 @@ p {
 }
 
 
+/* the video on workshops page */
+
+#parallax .parallax-five {
+    // padding-top: 200px;
+    // padding-bottom: 200px;
+    // position: absolute;
+    // height: 92vh;
+    // overflow: hidden;
+    // position: relative;
+    // width: 100%;
+    // z-index: -100;
+}
+
+#background-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+}
+
+
 /* Extras */
 
 
@@ -279,17 +320,16 @@ p {
     margin: 0 auto;
 }
 
+.gallery-container {
+    overflow-x: hidden;
+    width: 98vw;
+    margin: 0 auto;
+}
+
 
 /* About page */
 
 .about-content {
-    position: relative;
-    overflow: hidden;
-    // background-image: url("./images/doggo1.jpg");
-    // background-size: 100%;
-}
-
-.about_content {
     width: 80vw;
     margin: 0 auto;
     overflow-y: hidden;
@@ -307,185 +347,80 @@ p {
     }
 }
 
-.about_grid {
-    margin-top: 10%;
-    margin-bottom: 10%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 600px 600px;
-    grid-row-gap: 3em;
-    grid-column-gap: 2em;
-    // align-items: center;
-    justify-content: center;
+.group {
+    margin-bottom: 2em;
 }
 
-.about_text_left {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-    align-self: auto;
-    justify-self: center;
+#about .left {
+    float: left;
+    width: 45%;
+    text-align: left;
     p {
-        font-size: 1.5vw;
+        margin: 1em;
     }
 }
 
-.about_text_right {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-    align-self: auto;
-    justify-self: center;
+#about .right {
+    float: right;
+    width: 45%;
+    text-align: left;
     p {
-        font-size: 1.5vw;
+        margin: 1em;
     }
 }
 
-.about_img_right {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-    align-self: auto;
-    justify-self: center;
-    img {
-        max-width: 100%;
-        max-height: 100%;
-    }
-}
-
-.about_img_left {
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-    align-self: auto;
-    justify-self: center;
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-}
-
-.gallery_container {
-    width: 80vw;
-    margin: 0 auto;
-}
-
-
-/*********/
-
-.about-flex {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-// .col-image {
-//     background-size: cover;
-//     background-position: center center;
-//     .bio1 {
-//         background-image: url("images/bio.jpg");
-//     }
-//     .bio2 {
-//         background-image: url("images/IRENE.jpg");
-//     }
-// }
-// .col-text {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-// }
-// .col {
-//     flex: 1;
-// }
-.bio1 {
-    // height: 500px;
-    // width: auto;
-    background-image: url("images/bio.jpg");
-}
-
-.bio2 {
-    background-image: url("images/IRENE.jpg");
-}
-
-// .col-left {
-//     order: -1;
-// }
-// .aligner-item {
-//     width: 600px;
-// }
-.col-text {
-    height: 20em;
-}
-
-.grid-flex {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-flex: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    flex-direction: row;
-    -webkit-flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    height: 700px;
-    margin: 5%
-}
-
-.col {
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
-    margin-right: 3em;
-    margin-bottom: 3em;
-}
-
-.col-left {
-    -webkit-box-ordinal-group: -1;
-    -webkit-order: -1;
-    -ms-flex-order: -1;
-    order: -1;
-}
-
-.col-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.Aligner-item {
-    width: 75%;
-}
-
-.col-image {
-    // background-size: cover;
-    // background-position: center center;
-    max-height: 100%;
+.bio-image {
     max-width: 100%;
+    height: auto;
+    margin: 1em;
 }
 
-@media (max-width: 640px) {
-    .grid-flex {
-        height: 40em;
-        display: -webkit-flex;
-        -webkit-flex-direction: column;
-        flex-direction: column;
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.store-container {
+    min-height: 70vh;
+    h1 {
+        text-align: center;
+        margin-top: 2em;
+        font-size: 3em;
+        font-family: 'Oswald', 'sans-serif';
+        color: $font-color;
     }
-    .col {
-        order: vertical;
+    p {
+        text-align: center;
+        font-family: 'Catamaran', sans-serif;
+        color: $font-color;
+        font-size: 1.5em;
     }
-    .col-left {
-        -webkit-box-ordinal-group: 0;
-        -webkit-order: 0;
-        -ms-flex-order: 0;
-        order: 0;
+}
+
+.outter-workshop {
+    overflow-x: hidden;
+}
+
+.workshop-container {
+    background-color: white;
+    min-height: 70vh;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin-top: 80vh;
+    h1 {
+        margin: 2em;
+        text-align: center;
     }
-    .col-text div p {
-        padding: 1em;
-    }
-    .Aligner-item {
-        width: 90%;
+}
+
+.video-container {
+    width: 100vw;
+    height: auto;
+    video {
+        z-index: -5;
+        width: 100%;
     }
 }
