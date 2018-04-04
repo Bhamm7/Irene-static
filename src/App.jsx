@@ -18,8 +18,6 @@ const App = () => (
         <Header />
         <main>
           <Routes />
-
-
         </main>
         <Footer />
       </div>

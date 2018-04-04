@@ -6,6 +6,7 @@ $font-color: #5b5060;
 
 @import 'scss_files/reset';
 @import 'scss_files/header';
+@import 'scss_files/social';
 @import 'scss_files/contact';
 @import 'scss_files/footer';
 @import 'scss_files/mediaqueries';
@@ -79,6 +80,7 @@ h3 {
 a {
     font-family: 'Oswald', sans-serif;
     font-size: 1em;
+    text-decoration: none;
 }
 
 p {
@@ -400,6 +402,22 @@ p {
 
 .outter-workshop {
     overflow-x: hidden;
+    .title {
+        z-index: -2;
+        width: 100%;
+        position: fixed;
+        // text-align: center;
+        justify-content: center;
+        display: inline-flex;
+        h1 {
+            opacity: 0.75;
+            padding: 15px;
+            font-size: 3em;
+            border: 5px solid white;
+            color: white;
+            margin-top: 34vh;
+        }
+    }
 }
 
 .workshop-container {

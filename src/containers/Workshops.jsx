@@ -5,7 +5,9 @@ import backgroundVid from 'videos/workshop_small.mp4'
 
 export default () => (
   <div className="outter-workshop">
-    
+    <div className="title">
+      <h1>WORKSHOPS</h1>
+    </div>
     <div className="workshop-container">
       <h1>Upcoming Workshops</h1>
       <h2>May 16th, 2018 - Calgary, AB, Canada</h2>

@@ -42,7 +42,7 @@
 
 @media screen and (max-width: 1280px) and (min-width: 960px) {
     nav {
-        height: 70px;
+        height: 55px;
     }
     .logo {
         grid-column: 3 / 20;
@@ -53,6 +53,9 @@
     }
     .menu-button {
         display: grid;
+    }
+    .contact-container {
+        max-width: 70vw;
     }
 }
 
@@ -85,6 +88,9 @@
     }
     #footer-right {
         grid-column: 3 / 4;
+    }
+    .contact-container {
+        max-width: 70vw;
     }
 }
 
@@ -140,6 +146,9 @@
         grid-row: 3 / 4;
         grid-column: 1 / 1;
     }
+    .contact-container {
+        max-width: 70vw;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -147,6 +156,9 @@
     .right {
         float: none;
         width: auto;
+    }
+    .contact-container {
+        max-width: 85vw;
     }
 }
 
