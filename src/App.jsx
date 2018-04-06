@@ -4,10 +4,10 @@ import { hot } from 'react-hot-loader'
 import { ParallaxProvider } from 'react-scroll-parallax'
 import Routes from 'react-static-routes'
 
-
 //
 import Footer from './containers/Footer'
 import Header from './containers/Header'
+
 
 import './app.scss'
 

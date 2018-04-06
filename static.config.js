@@ -7,8 +7,8 @@ const butter = Butter('763fdfaf8d9f5f8179931fad07f2cc98bf3cd155')
 //
 
 butter.post.list({ page: 1, page_size: 10 }).then(function(postResponse) {
-
-    // console.log(postResponse.data.data)
+    // const { data: posts } = postResponse.data.data;
+    // console.log(postResponse.data)
 })
 
 export default {
@@ -16,9 +16,12 @@ export default {
         title: 'React Static',
     }),
     getRoutes: async() => {
-        const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
-        // const { data: posts } = await butter.post.list({ page: 1, page_size: 10 })
-        // console.log(posts.data.data.title)
+        // const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        const resp = await butter.post.list({ page: 1, page_size: 10 });
+        const { data: posts } = resp.data
+            // const resp = await butter.post.list({ page: 1, page_size: 10 })
+            // console.log(posts.data.data[0].title)
+            // console.log(resp)
 
 
         return [{
@@ -56,7 +59,7 @@ export default {
                     posts,
                 }),
                 children: posts.map(post => ({
-                    path: `/post/${post.id}`,
+                    path: `/post/${post.slug}`,
                     component: 'src/containers/Post',
                     getData: () => ({
                         post,
