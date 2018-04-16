@@ -72,10 +72,20 @@ export default withSiteData(() => (
     <section>
       <div className="image-section parallax-four">
         <ScrollAnimation animateIn="fadeIn">
-          <div className="home-button-img middle"><Link to="/blog">Blog</Link></div>
+          <div className="home-button-img middle"><Link to="/store">Store</Link></div>
         </ScrollAnimation>
       </div>
   
+    </section>
+
+    <section>
+      <div className="block">
+        <ScrollAnimation animateIn="fadeIn">
+          <div className="home-button-white right"><Link to="/blog">Blog</Link></div>
+        </ScrollAnimation>
+        
+        <p className="margin-top-10">In 2011, UGG will go back to its roots and focus on bringing the active men that brought the brand to life back with new styles allowing them to love the brand again as well. Partnering with Super Bowl champion and NFL MVP Tom Brady, UGG will invite even more men to feel the love the rest of the world knows so well. UGG will also step into the world of high fashion with UGG Collection. The UGG Collection fuses the timeless craft of Italian shoemaking with the reliable magic of sheepskin, bringing the luxurious feel of UGG to high end fashion. As the love for UGG continues to spread across the world, we have continued to offer new and unexpected ways to experience the brand. The UGG journey continues on and the love for UGG continues to spread.</p>
+      </div>
     </section>
 
   </div>

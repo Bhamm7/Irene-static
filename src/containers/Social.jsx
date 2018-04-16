@@ -13,32 +13,35 @@ export default class Social extends React.Component {
 
   _onReady(event) {
     // access to player in all event handlers via event.target
-    event.target.pauseVideo();
+    // event.target.pauseVideo();
   }
 
   render() {
     const opts = {
-      height: '390',
-      width: '640',
+      height: '329',
+      width: '540',
       playerVars: { // https://developers.google.com/youtube/player_parameters
-        autoplay: 1
+        autoplay: 0
       }
     }
 
     return (
-      <div className="social-container">
+      <div id="social" className="social-container">
         <h1>Follow me and Interact!</h1>
         <div className="card youtube">
           <h2>Youtube</h2>
-          <YouTube videoId="Ju792eH3A_s" opts={opts} onReady={this._onReady} />
+          <div className="video"><YouTube videoId="Ju792eH3A_s" opts={opts} onReady={this._onReady} /></div>
           <div className="g-ytsubscribe" data-channelid="UCqHw1bJGROJW8UI1UT7W8yw" data-layout="default" data-count="default" />
         </div>
+        <p className="line-break" />
         <div className="card instagram">
           <h2>Instagram</h2>
         </div>
+        <p className="line-break" />
         <div className="card fivepx">
           <h2>500px</h2>
         </div>
+        <p className="line-break" />
         <div className="card facebook">
           <h2>Facebook</h2>
         </div>
