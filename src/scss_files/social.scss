@@ -9,6 +9,9 @@
 #social .card {
     width: 70vw;
     height: 600px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     // background-color: gray;
     // text-align: center;
     margin: 0 auto;
@@ -21,13 +24,49 @@
     margin: 0 auto;
 }
 
-.youtube {}
+#social .social-text {
+    ul {
+        padding: 10px 0 10px 2em;
+    }
+    li {
+        color: $font-color;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        padding: 2px 0 2px 0;
+    }
+    justify-self: center;
+    align-self: center;
+    grid-column: 1;
+}
 
-#social .video {
-    float: right;
+#social .header-icon {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+    // text-align: center;
+    h2 {
+        font-size: 4em;
+        padding: 0;
+        display: inline-block;
+        margin: 0 1em 0 0;
+    }
+    img {
+        display: inline-block;
+    }
+}
+
+.sub {
+    margin: 10px;
+}
+
+#social .content {
+    align-self: center;
+    justify-self: center;
+    grid-column: 2;
 }
 
 #social .g-ytsubscribe {}
+
+.youtube {}
 
 .instagram {}
 

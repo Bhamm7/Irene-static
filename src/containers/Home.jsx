@@ -4,6 +4,12 @@ import 'animate.css/animate.min.css'
 import ScrollAnimation from 'react-animate-on-scroll'
 
 import logoImg from '../images/logo.png'
+import twitterIcon from 'images/icons/001-twitter.png'
+import youtubeIcon from 'images/icons/002-youtube.png'
+import facebookIcon from 'images/icons/003-facebook.png'
+import instagramIcon from 'images/icons/004-instagram.png'
+import fiveHundredIcon from 'images/icons/005-500px-logo.png'
+
 
 export default withSiteData(() => (
   <div id="parallax">
@@ -24,9 +30,9 @@ export default withSiteData(() => (
         <ScrollAnimation animateIn="fadeIn"> 
           <div className="home-button-white"><Link to="/about">About</Link></div>  
         </ScrollAnimation>
-        <p className="line-break margin-top-10" />
+        {/* <p className="line-break margin-top-10" /> */}
         <ScrollAnimation animateIn="fadeInRight" animateOnce>
-          <p className="margin-top-10">The UGG brand began to symbolize those who embraced sport and a relaxed, active lifestyle. More than that, an emotional connection and a true feeling of love began to grow for UGG boots, just as Brian had envisioned. People didn't just like wearing UGG boots, they fell in love with them and literally could not take them off. By the end of the 90's, celebrities and those in the fashion world took notice of the UGG brand. A cultural shift occurred as well - people were embracing, and feeling empowered, by living a more casual lifestyle and UGG became one of the symbols of this lifestyle. By 2000, a love that began on the beaches had become an icon of casual style. It was at this time that the love for UGG grew in the east, over the Rockies and in Chicago. In 2000, UGG Sheepskin boots were first featured on Oprah's Favorite Things® and Oprah emphatically declared that she "LOOOOOVES her UGG boots." From that point on, the world began to notice.</p>
+          <p className="margin-top-10">Learn about me, how I got started, and the gear I use.</p>
         </ScrollAnimation>
       </div>
     </section>
@@ -40,13 +46,30 @@ export default withSiteData(() => (
     
     </section>
 
-    <section>
+    <section id="social">
       <div className="block">
         <ScrollAnimation animateIn="fadeIn">
           <div className="home-button-white right"><Link to="/social">Social</Link></div>
         </ScrollAnimation>
-        <p className="line-break margin-top-10" />
-        <p className="margin-top-10">Fueled by celebrities from coast to coast wearing UGG boots and slippers on their downtime, an entirely new era of fashion was carved out. As a result, the desire and love for UGG increased as people wanted to go deeper into this relaxed UGG experience. UGG began offering numerous color and style variations on their sheepskin boots and slippers. Cold weather boots for women and men and leather casuals were added with great success. What started as a niche item, UGG sheepskin boots were now a must-have staple in everyone's wardrobe. More UGG collections followed, showcasing everything from knit boots to sneakers to wedges, all the while maintaining that luxurious feel UGG is known for all over the world. UGG products were now seen on runways and in fashion shoots from coast to coast. Before long, the love spread even further.</p>
+        {/* <p className="line-break margin-top-10" /> */}
+        
+        <ScrollAnimation animateIn="slideInLeft">
+          <p className="margin-top-10">Follow me and interact on multiple platforms.</p>
+        </ScrollAnimation>
+       
+          <ScrollAnimation animateIn="slideInLeft" delay="600">
+            <div className="animated-icon"><img alt="youtube-icon" src={youtubeIcon} /></div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="slideInLeft" delay="400">
+            <div className="animated-icon"><img alt="instagram-icon" src={instagramIcon} /></div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="slideInLeft" delay="200">
+            <div className="animated-icon"><img alt="fivepx-icon" src={fiveHundredIcon} /></div>
+          </ScrollAnimation>
+          <ScrollAnimation animateIn="slideInLeft" delay="10">
+            <div className="animated-icon"><img alt="facebook-icon" src={facebookIcon} /></div>
+          </ScrollAnimation>
+       
       </div>
     </section>
 
