@@ -109,7 +109,7 @@ export default class Social extends React.Component {
           </div>      
           <div className="content"><YouTube videoId="Ju792eH3A_s" opts={opts} onReady={this._onReady} /></div> 
         </div>
-        <h1>Check out my blog for more behind the scenes!</h1>
+        {/* <h1>Check out my blog for more behind the scenes!</h1> */}
       </div>
     )
   }

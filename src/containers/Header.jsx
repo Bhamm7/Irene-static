@@ -17,7 +17,7 @@ export default () => (
             <Link to="/workshops">Workshops</Link>
             <Link to="/store">Store</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/blog">Blog</Link>    
+            {/* <Link to="/blog">Blog</Link>     */}
         </div>
         </div>
         <div className="link-area">  
@@ -27,7 +27,7 @@ export default () => (
         <Link to="/workshops">Workshops</Link>
         <Link to="/store">Store</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/blog">Blog</Link>      
+        {/* <Link to="/blog">Blog</Link>       */}
         </div>
     </nav>
 )

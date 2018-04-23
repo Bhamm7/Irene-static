@@ -20,7 +20,7 @@ export default () => (
             <Link to="/workshops">Workshops</Link>
             <Link to="/store">Store</Link>
             <Link to="/contact">Contact</Link>
-            <Link to="/blog">Blog</Link>
+            {/* <Link to="/blog">Blog</Link> */}
         </ul>
         <ul className="social-footer"  id="footer-middle">
             <h1>Connect With Me</h1>
